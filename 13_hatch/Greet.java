@@ -1,7 +1,10 @@
 public class Greet{
   public static void main(String[] args){
-    BigSib richard = new BigSib();
-    System.out.print(richard.greet("freshman"));
+    String greeting;
     
-  } //end main()
-} //end Greet
+    BigSib richard = new BigSib();
+    greeting = richard.greet("freshman")
+    System.out.println(greeting);
+
+  }
+}
