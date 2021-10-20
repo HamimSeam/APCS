@@ -15,27 +15,26 @@ Maybe authenticate could include the pin
 **/
 
 public class Teller {
-
 	public static void main(String[] args) {
 		//You can deposit negative values to get negative balance, but not withdraw from it
 		BankAccount ba = new BankAccount();
 		ba.setName("John");
-    ba.setPasswd("password");
-    ba.setPin((short) 1234);
-    ba.setAcctNum(123456789);
-    ba.setBalance(50.00);
-    ba.deposit(-500.00);
-    ba.withdraw(10.00);
+    		ba.setPasswd("password");
+    		ba.setPin((short) 1234);
+    		ba.setAcctNum(123456789);
+    		ba.setBalance(50.00);
+    		ba.deposit(-500.00);
+    		ba.withdraw(10.00);
 
 		//Returns a message of "true" or "false", which may help the programmer but not so much a user
 		System.out.println(ba.authenticate(123456789, "password"));
 		System.out.println(ba.authenticate(123726287, "password"));
 		System.out.println(ba.authenticate(123456789, "pass"));
 
-    System.out.println(ba.toString());
+    		System.out.println(ba.toString());
 
-    //Testing negative balance and pin/Acct #
-    BankAccount acc = new BankAccount();
+    		//Testing negative balance and pin/Acct #
+    		BankAccount acc = new BankAccount();
 		acc.setName("bob");
 
 		//Password can be a mere one character
@@ -48,9 +47,9 @@ public class Teller {
 		acc.deposit(55.00);
 
 		//There is no error message for withdrawing more than the balance, as long as its >= 0, it simply doesnt withdraw
-    acc.withdraw(10.00);
+    		acc.withdraw(10.00);
 
-    System.out.println(acc.toString());
+    		System.out.println(acc.toString());
 		}
 
 }
