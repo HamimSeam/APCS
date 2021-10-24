@@ -1,5 +1,5 @@
 /*
-Hamim Seam
+Team Name: Lenovo Bozos (Hamim Seam, Vansh Saboo)
 APCS
 HW 23 -- What Does Equality Look Like? (Coins, Preconditions and Postconditions)
 2021-10-24
