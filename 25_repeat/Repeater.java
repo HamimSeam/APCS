@@ -1,5 +1,5 @@
 /*
-Hamim Seam
+Hamim Seam and Vansh Saboo
 APCS
 HW25 -- Do I repeat myself? (While Loops and Recursion)
 2021-10-26
