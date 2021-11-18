@@ -1,0 +1,64 @@
+Hamim Seam
+APCS
+HW 36 -- All Quacked Up (Appendix D)
+2021-11-18
+Time spent: 0.5 hours
+
+D1 - Compiler-Time Errors
+Incremental development is key
+Certain errors cause spurs of others; rely on first error as guide
+Look for error location in message; may not necessarily be error, but related
+
+Common syntax errors:
+-parentheses/brackets
+-capitalization
+-semicolons
+-quotation marks
+-assigning one type a different type (ex: assigning String to int)
+-order/types in method parameterts
+-value vs void methods
+-instance vs static methods
+-static vs nonstatic in general
+
+Check if code being edited == code compiler is looking at (ex: did you javac???)
+
+Debugging by bisection
+A late resort
+Make backup (add .old to file name)
+Delete half of code
+error persists? delete other half instead and repeat
+error gone? reinsert half (bring down the scope) and repeat
+
+D2 - Run-Time Errors
+Hanging program - infinite loop/recursion
+Add print statements to check
+Check for base cases in recursion
+Print statements to determine flow of execution
+Print statements, print statements, print statements
+Too many prints? Simplify and refactor statements/code (ex: comment out experimental bits)
+
+D3 - Logic Errors
+Are the right things happening? The wrong ones?
+Develop deep understanding of what each cog does, especially with library methods
+(ex: is the range inclusive on both ends?)
+Make a mental moderl (maybe stack diagram too???)
+
+Common logic errors:
+-integer divison (use doubles if needed)
+-Floating point numbers are APPROXIMATE 
+ex: if (Math.abs(d - 1.23) < 0.000001) instead of if (d == 1.23)
+-.equals() vs ==
+-Inheritance
+
+Break long expressions into parts
+Change print to println when needed (some environments store print only until println)
+Take time away from code and refresh
+Get another pair of eyes
+
+Rubber Ducking (Origin of the duckies???):
+Buy a ducky
+Explain problem to ducky
+Disco solution
+Show gratitude
+
+Evaluate debugging skills after the matter --> grow as a coder
