@@ -1,3 +1,14 @@
+/******************************
+ * class TwoDimArray
+ * (skeleton)
+ * practice working with 2D arrays
+ ******************************/
+
+// Hamim Seam, Jacob Ng, Kevin Cheng
+// APCS pd8
+// HW40 -- 2D arrays
+// 2021-11-30
+
 public class TwoDimArray
 {
   //postcond: prints each row of 2D int array a on its own line
