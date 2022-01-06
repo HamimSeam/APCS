@@ -1,27 +1,32 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// TNPG: Silly Snakes 
+// Roster: Neil Lin, Vansh Saboo, Hamim Seam
+// APCS pd8
 // HW53 -- implementing insertion sort
-// 2022-01-06r
-// time spent:  hrs
+// 2022-01-05
+// time spent: 0.5 hrs
 
 /******************************
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
- * 
+   - Take an element to the right of the partition
+   - Compare it to the element to its left 
+   - If it's less than the element to its left, swap with it, and keep swapping adjacent elements until the element is inserted at its correct location.
+   - If it's greater or equal to the element to its left, keep it at the end
+   
  * DISCO
  *
  * QCC
  * q0: How many passes to sort n elements?
- * a0: 
+ * a0: n passes
  * q1: What do you know after pass p?
- * a1: 
+ * a1: the first p elements form a sorted list
  * q2: How will you know when sorted?
- * a2:
+ * a2: You have made n passes, n being the number of elements in the list
  * q3: What constitues a pass?
- * a3:
+ * a3: Comparing an element to the elements before it (which form a sorted list) and insert the element where needed
  * q4: What must you track?
- * a4: 
+ * a4: The partitioning index
  ******************************/
 
 
@@ -111,8 +116,7 @@ public class InsertionSort
 
   public static void main( String [] args )
   {
-
-    /*==========for AL-returning methods==========    
+    
       System.out.println("\n*** Testing sort-in-place (void) version... *** ");
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
@@ -129,7 +133,7 @@ public class InsertionSort
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
     
 
-
+    /*
       System.out.println( "*** Testing non-void version... *** " );
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
@@ -149,8 +153,7 @@ public class InsertionSort
       + cocoSorted );
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
-
-      ============================================*/
+      */
 
   }//end main
 
