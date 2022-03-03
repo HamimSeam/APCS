@@ -1,0 +1,43 @@
+Team Name Pretending Greatness (Hamim Seam and Gabriel Thompson)
+APCS
+HW69 -- Making Sense
+2022-03-02
+time spent: 0.7hrs
+
+Execution time measurements (from Hamim's trio)
+ n=5   1.2s     across 8 executions
+ n=6   32.3s    across 8 executions
+ n=7   803s     across 3 executions
+ n=8   1103s    across 3 executions
+
+We chose to use the measurements from Hamim's trio (Suspicious Oranges) because they actually
+had a recorded time for 8x8 board, whereas Kartik and Gabriel gave up after a few minutes out
+of laziness. Also, their data for 6x6 and 7x7 makes significantly more sense.
+
+q0: No, an open tour can not always be formed. For example, we found that it is impossible to
+    generate an open tour from row 0, col 1 on a 5x5 board.
+
+q1: If any closed tour is possible for that size, then yes, a closed tour can always be found,
+    because the circular tour crosses every tile, and the knight can just continue going
+    around the tour because it is closed.
+
+q2: The time complexity (we think) is either exponential or factorial growth, because the
+    number of nodes multiplies at each level of the tree.
+
+q3: Maybe we could we do something with John Gupta-She's idea of how to optimize corners? It
+    seems that our algorithm guessing how to navigate around corners is wasting a lot of
+    processing time.
+
+PART 2:
+
+CLEANEST ALGO:
+
+void function solveMaze(row, col)
+ 1. If the row and column are out of bounds OR are on a tile marked as already viewed...
+      a. End the function, as we shouldn't check any surrounding tiles
+ 2. If you're at the ending tile...
+      a. Print the board state
+      b. System.exit(0)
+ 3. Mark the current row and column as visited
+ 4. Call solveMaze() on the tile directly above, below, to the left, and to the right of
+    the current tile.
