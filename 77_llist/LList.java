@@ -198,7 +198,7 @@ public class LList implements List //interface def must be in this dir
     System.out.println("added item to index 0");
     System.out.println(james);
 
-    System.out.println( "removed item: " + james.remove(0));
+    System.out.println( "removed item: " + james.remove(4));
     System.out.println(james);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
