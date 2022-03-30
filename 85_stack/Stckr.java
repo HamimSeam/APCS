@@ -11,9 +11,19 @@ public class Stckr
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // USAGE: un-comment exactly 1 assignment below
-    Stack<Z> cakes = new ALStack<Z>();
+    Stack<Object> cakes = new ALStack<Object>();
     //Stack<Z> cakes = new LLStack<Z>();
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    cakes.push("leo");
+    cakes.push(85);
+    cakes.push(true);
+
+    while (!cakes.isEmpty()) {
+        System.out.println(cakes.peekTop());
+	System.out.println(cakes.pop());
+    }
+
 
     //...
 
