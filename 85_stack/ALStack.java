@@ -11,9 +11,9 @@ public class ALStack<PANCAKE> implements Stack<PANCAKE> {
 		_size = 0;
 	}
 
-	public void push( PANCAKE s )
+	public void push( PANCAKE x )
   	{
-    		_stack.add(s);
+    		_stack.add(x);
 		_size++;
   	}// O(1) amortized
 

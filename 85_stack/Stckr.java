@@ -11,8 +11,8 @@ public class Stckr
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // USAGE: un-comment exactly 1 assignment below
-    Stack<Object> cakes = new ALStack<Object>();
-    //Stack<Z> cakes = new LLStack<Z>();
+    //Stack<Object> cakes = new ALStack<Object>();
+    Stack<Object> cakes = new LLStack<Object>();
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     cakes.push("leo");

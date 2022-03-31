@@ -2,12 +2,16 @@ Team Three Kevins: Kevin Xiao, Kevin Li, Hamim Seam
 APCS
 HW85 -- Leon Leonwood Stack
 2022-03-30
-time spent:
+time spent: 0.5 hours
 
 DISCO:
+    -Both the object declaration AND the initialization for the ArrayList and LinkedList needed to be parameterized with <PANCAKE>. 
+     We initially only had the parameter on the initialization, and so a PANCAKE type wouldn't be returned in our methods.
+  
 
 QCC:
-
+    -Would we ever need an isFull() method?
+    -Is an ALStack or LLStack better from a time complexity standpoint?
 
 
 
