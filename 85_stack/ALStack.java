@@ -11,29 +11,29 @@ public class ALStack<PANCAKE> implements Stack<PANCAKE> {
 		_size = 0;
 	}
 
-	public void push( PANCAKE x )
+	public void push( PANCAKE s )
   	{
-    		_stack.add(x);
+    	_stack.set(_size, s);
 		_size++;
-  	}// O(1) amortized
+  	}// O(1)
 
 
   	//means of removal
   	public PANCAKE pop()
   	{
 		_size--;
-    		return _stack.get(_size);
+    	return _stack.get(_size);
   	}// O(1)
 
   	public PANCAKE peekTop()
 	{
-    		return _stack.get(_size-1);
+    	return _stack.get(_size-1);
   	}
 
 	//chk for emptiness
 	public boolean isEmpty()
   	{
-    		return _size == 0;
+    	return _size == 0;
   	}// O(1)
 
 }

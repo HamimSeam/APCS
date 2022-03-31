@@ -2,16 +2,18 @@ Team Three Kevins: Kevin Xiao, Kevin Li, Hamim Seam
 APCS
 HW85 -- Leon Leonwood Stack
 2022-03-30
-time spent: 0.5 hours
+time spent: .5 hours
 
 DISCO:
-    -Both the object declaration AND the initialization for the ArrayList and LinkedList needed to be parameterized with <PANCAKE>. 
-     We initially only had the parameter on the initialization, and so a PANCAKE type wouldn't be returned in our methods.
-  
-
+    - We can't use add() in ArrayList when we want to push() because add will place the input at the end of the list, 
+    which may not be the top of the stack, since the pop() method doesn't actually remove the the top value
+    - 
 QCC:
-    -Would we ever need an isFull() method?
-    -Is an ALStack or LLStack better from a time complexity standpoint?
+    - So which one's better?
+    - If a LinkedList has both a tail and head pointer, then it probably shouldn't matter whether we add to the front or the end 
+    of the list
+
+
 
 
 

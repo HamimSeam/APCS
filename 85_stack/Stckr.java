@@ -21,9 +21,13 @@ public class Stckr
 
     while (!cakes.isEmpty()) {
         System.out.println(cakes.peekTop());
-	System.out.println(cakes.pop());
+	    System.out.println(cakes.pop());
     }
 
+    for (int i = 0; i < 10; i++) {
+        cakes.push(i);
+        System.out.println(cakes.peekTop());
+    }
 
     //...
 

@@ -7,7 +7,7 @@ public class LLStack<PANCAKE> implements Stack<PANCAKE> {
 
 	public LLStack() {
 		_stack = new LinkedList<PANCAKE>();
-		_size = 0;
+        _size = 0;
 	}
 
 	//Return true if this stack is empty, otherwise false.
@@ -17,19 +17,18 @@ public class LLStack<PANCAKE> implements Stack<PANCAKE> {
 
     	//Return top element of stack without popping it.
     	public PANCAKE peekTop() {
-		PANCAKE top = _stack.get(_size-1);
-		return top;
+		return _stack.getFirst();
 	}
 
     	//Pop and return top element of stack.
     	public PANCAKE pop() {
 		_size--;
-		return _stack.get(_size);
+		return _stack.remove();
 	}
 
     	//Push an element onto top of this stack.
     	public void push( PANCAKE x ) {
-		_stack.add(x);
+		_stack.addFirst(x);
 		_size++;
 	}
 
