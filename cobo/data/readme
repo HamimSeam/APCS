@@ -1,0 +1,54 @@
+
+
+Team BrainForked - Gloria Lee, Jack Chen, Hamim Sean
+APCS
+L08: America's Next Top Data Scientist
+2022-04-06w
+time spent: 3.5 hrs
+
+Our experience:
+- Figuring out how to successfully compile the DataStudentCode files was frustrating
+  because we were all using git bash and didn't realize that we needed to use different commands
+  than the ones provided. We probably could have solved this issue by reading documentation.
+- Reading piazza is always helpful to keep track of new posts of questions that different groups
+  come up with that we were facing as well.
+- It was very interesting to see/imagine how many different ways sinbad/data sets
+  could be used in practical ways.
+
+
+
+  DISCO:
+  - different commands have to be run when using sinbad in git bash.
+    However, we were able to solve this issue by sshing into lab computers.
+  - Have to be careful with brackets when dealing with nested classes/inner classes
+  - Look through entire lab to identify most efficient workflow and plan.
+
+  QCC
+  - Why the difference in commands when using git bash to use sinbad vs lab computers
+  - What was able to be run on lab computers could not be run on git bash.
+  - ??? --> core.ops.SignatureUnificationException: could not find a class named: Observation (ds:no-class)
+
+
+
+
+
+
+
+
+
+data sets:
+
+§ http://www.kaggle.com
+§ http://www.data.gov
+§ https://toolbox.google.com/datasetsearch
+
+
+To make a JAR available to runtime environment (JRE)...
+
+```
+$ javac -classpath .:path/to/sinbad.jar -d . Driver.java
+$ java -classpath .:path/tosinbad.jar Driver
+```
+
+411 on sinbad
+https://berry-cs.github.io/sinbad/install-java
