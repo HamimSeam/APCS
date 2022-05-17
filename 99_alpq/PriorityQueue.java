@@ -5,7 +5,6 @@ public interface PriorityQueue<T>
     public boolean isEmpty();
 
     public T peekMin();
-    
-    public T removeMin();        
-}
 
+    public T removeMin();
+}
