@@ -28,7 +28,7 @@ public class ArrayPriorityQueue<T> implements PriorityQueue<T>{
 
         return min;
     }
-    
+
     //O(n)
     public T removeMin() {
         T min = queue.get(0);
