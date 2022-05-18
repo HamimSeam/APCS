@@ -32,7 +32,7 @@ public class ALHeap
   {
     String foo = "[";
     for (int i = 0; i < _heap.size(); i++) {
-      foo += _heap.get(i);
+      foo += _heap.get(i) + ", ";
     }
     foo += "]";
     return foo;
@@ -57,7 +57,7 @@ public class ALHeap
   public Integer peekMin()
   {
     return _heap.get(0);
-  }//O(1) 
+  }//O(1)
 
 
   /**
@@ -75,13 +75,12 @@ public class ALHeap
     int rc = 2 * p + 2;
     int lc = 2 * p + 1;
 
-    while (minOf(addVal, rc) == addVal){
+    if (minOf(addVal, rc) == addVal){
       swap(_heap.indexOf(addVal), _heap.indexOf(rc));
     }
     else if (minOf(addVal, lc) == addVal){
       swap(_heap.indexOf(addVal), _heap.indexOf(lc));
     }
-
   }//O(n)
 
   public void help( Integer addVal, int rc, int lc){
@@ -91,7 +90,6 @@ public class ALHeap
     else if (minOf(addVal, lc) == addVal){
       swap(_heap.indexOf(addVal), _heap.indexOf(lc));
     }
-
   }
 
 
@@ -102,20 +100,55 @@ public class ALHeap
    * ALGO:
    * <your clear && concise procedure here>
    */
-  // public Integer removeMin()
-  // {
+  public Integer removeMin()
+  {
+    int removed = _heap.get(0);
+    int p = 0;
+    int lastValP = _heap.size() - 1;
+    for (int i = _heap.size() - 2; _heap.get(i+1) == 0; i--) {
+      lastValP = i;
+    }
 
-  // }//O(?)
+    System.out.println(lastValP);
 
-  // /*
-  //  * minChildPos(int)  ---  helper fxn for removeMin()
-  //  * Returns index of least child, or
-  //  * -1 if no children, or if input pos is not in ArrayList
-  //  * Postcondition: Tree unchanged
-  //  */
-  // private int minChildPos( int pos )
-  // {
-  // }//O(?)
+    swap(0, lastValP);
+    _heap.set(lastValP, 0);
+    while (minChildPos(p) != -1) {
+      if (minChildPos(p) > _heap.get(p)) {break;}
+      int newP = minChildPos(p);
+      swap(p, newP);
+      p = newP;
+      //System.out.println("current p: " + p);
+    }
+    return removed;
+  }//O(?)
+
+
+  /**
+   * minChildPos(int)  ---  helper fxn for removeMin()
+   * Returns index of least child, or
+   * -1 if no children, or if input pos is not in ArrayList
+   * Postcondition: Tree unchanged
+   */
+  private int minChildPos( int pos )
+  {
+    
+    int rc = 2 * pos + 2;
+    int lc = 2 * pos + 1;
+
+    if (pos >= _heap.size() || (rc >= _heap.size() && lc >= _heap.size())) {
+      return -1;
+    }
+    else if (rc < _heap.size() && lc >= _heap.size()) {
+      return rc;
+    }
+    else if (lc < _heap.size() && rc >= _heap.size()) {
+      return lc;
+    }
+    else {
+      return _heap.indexOf(minOf(_heap.get(rc), _heap.get(lc)));
+    }
+  }
 
 
   //~~~~~~~~~~~~~ aux helper fxns ~~~~~~~~~~~~~~
@@ -162,29 +195,30 @@ public class ALHeap
       pile.add(9);
       System.out.println(pile);
 
+      
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
       /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
-      System.out.println("removing " + pile.removeMin() + "...");
-      System.out.println(pile);
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
